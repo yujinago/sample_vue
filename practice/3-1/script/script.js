@@ -4,5 +4,10 @@ new Vue({
     return {
       text: 'hello Vue.js'
     };
+  },
+  methods: {
+    handleClick() {
+      this.text = 'button pushed';
+    }
   }
 });
