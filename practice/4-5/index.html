@@ -16,6 +16,20 @@
           名前は4文字以上で入力してください
         </p>
       </div>
+      <div class="form-area__email">
+        <p>Eメールアドレス</p>
+        <input type="text" name="email" v-model="email">
+        <p v-if="isInValidEmail" class="error">
+          Eメールアドレスの形式で入力してください
+        </p>
+      </div>
+      <div class="form-area__tel">
+        <p>電話番号</p>
+        <input type="tel" name="tel" v-model="tel">
+        <p v-if="isInValidTel" class="error">
+          電話番号は数字8文字以上で入力してください
+        </p>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./script/script.js"></script>
