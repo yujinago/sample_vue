@@ -10,10 +10,10 @@ const imageThumbnail = Vue.component('image-thumbnail', {
 
 const app = new Vue({
   el: '#app',
-  component: {
+  components: {
     'image-thumbnail': imageThumbnail
   },
-  date() {
+  data() {
     return {
       images: [{
         path: './img/img1.jpg',
