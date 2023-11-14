@@ -29,3 +29,13 @@
 .img-box:hover {
   box-shadow: 4px 4px 10px #777;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
