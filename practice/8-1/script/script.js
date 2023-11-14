@@ -28,7 +28,8 @@ const modal = Vue.component('modal', {
 const app = new Vue({
   el: '#app',
   components: {
-    'image-thumbnail': imageThumbnail
+    'image-thumbnail': imageThumbnail,
+    modal
   },
   data() {
     return {
