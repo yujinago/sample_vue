@@ -8,6 +8,23 @@ const imageThumbnail = Vue.component('image-thumbnail', {
   template: `<div class="img-box" :style="{ backgroundImage: 'url(' + path + ')' }" @click="$emit('clickimage')"></div>`
 });
 
+const modal = Vue.component('modal', {
+  props: {
+    isShown: {
+      type: Boolean,
+      default: false
+    },
+    imagePath: {
+      type: String,
+      default: ''
+    }
+  },
+  template: `
+  <div v-if="isShown" class="modal" @click="$emit('close')">
+    <img class="modal-img" :src="imagePath" alt="selectedImage">
+  </div>`
+});
+
 const app = new Vue({
   el: '#app',
   components: {
@@ -15,6 +32,8 @@ const app = new Vue({
   },
   data() {
     return {
+      isShown: false,
+      selectedImage: '',
       images: [{
         path: './img/img1.jpg',
       },{
