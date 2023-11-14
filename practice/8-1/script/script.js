@@ -55,5 +55,20 @@ const app = new Vue({
         path: './img/img9.jpg'
       }]
     };
+  },
+  methods: {
+    onSelectImage(path) {
+      this.setImage(path);
+      this.openModal();
+    },
+    openModal() {
+      this.isShown = true;
+    },
+    closeModal() {
+      this.isShown = false;
+    },
+    setImage(path) {
+      this.selectedImage = path;
+    }
   }
 });
